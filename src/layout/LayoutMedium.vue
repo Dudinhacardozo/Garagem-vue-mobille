@@ -1,7 +1,7 @@
 <script setup>
-  import MediumHeader from '@/components/templates/medium/MediumHeader.vue';
-  import MediumAside from '@/components/templates/medium/MediumAside.vue';
-  import MediumFooter from '@/components/templates/medium/MediumFooter.vue';
+  import MediumHeader from '@/components/templats/medium/MediumHeader.vue';
+  import MediumAside from '@/components/templats/medium/MediumAside.vue';
+  import MediumFooter from '@/components/templats/medium/MediumFooter.vue';
 </script>
 
 <template>
