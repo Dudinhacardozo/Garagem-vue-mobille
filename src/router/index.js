@@ -1,10 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
-import LayoutFull from '@/layout/LayoutFull.vue';
+import LayoutFull from '@/layouts/LayoutFull.vue';
 import AcessorioView from "../views/AcessorioView.vue";
 import CategoriaView from "../views/CategoriaView.vue";
 import CorView from "../views/CorView.vue";
 import MarcaView from "../views/MarcaView.vue";
+import LogoutView from "../views/LogoutView.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -43,9 +44,16 @@ const router = createRouter({
           name: 'Login',
           component: () => import('@/views/LoginView.vue'),
         },
+        {
+          path: "/logout",
+          name: "logout",
+          component: LogoutView,
+        }
       ],
     },
   ],
 });
 
 export default router;
+
+

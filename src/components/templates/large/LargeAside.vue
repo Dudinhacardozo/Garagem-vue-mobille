@@ -1,5 +1,5 @@
 <script setup>
-import LogoTitle from '@/components/templats/LogoTitle.vue';
+import LogoTitle from '@/components/templates/LogoTitle.vue';
 </script>
 
 <template>
@@ -13,9 +13,6 @@ import LogoTitle from '@/components/templats/LogoTitle.vue';
     </div>
     <div class="divider" />
     <div class="menu">
-      <router-link to="/perfil">
-        <i class="icon mdi mdi-account-circle-outline" /> Perfil
-      </router-link>
       <router-link to="/acessorio">
         <i class="icon mdi mdi-cart-outline" /> Acessório
       </router-link>

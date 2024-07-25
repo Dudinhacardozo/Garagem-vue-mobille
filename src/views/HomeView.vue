@@ -3,5 +3,5 @@
 </script>
 
 <template>
-  <h1>Seja bem vindo a sua garagem!</h1>
+  <h1>Seja bem vindo!</h1>
 </template>

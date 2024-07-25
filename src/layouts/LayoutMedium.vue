@@ -1,28 +1,29 @@
 <script setup>
-  import LargeHeader from '@/components/templats/large/LargeHeader.vue';
-  import LargeAside from '@/components/templats/large/LargeAside.vue';
-  import LargeFooter from '@/components/templats/large/LargeFooter.vue';
+  import MediumHeader from '@/components/templates/medium/MediumHeader.vue';
+  import MediumAside from '@/components/templates/medium/MediumAside.vue';
+  import MediumFooter from '@/components/templates/medium/MediumFooter.vue';
 </script>
+
 <template>
-  <div id="layout-large">
+  <div id="layout-medium">
     <header>
-      <large-header />
+      <medium-header />
     </header>
     <aside>
-      <large-aside />
+      <medium-aside />
     </aside>
     <main>
       <router-view />
     </main>
     <footer>
-      <large-footer />
+      <medium-footer />
     </footer>
   </div>
 </template>
 <style scoped>
-#layout-large {
+#layout-medium {
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 6fr;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
     'aside header'

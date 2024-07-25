@@ -7,15 +7,15 @@ export function useLayout() {
     const width = window.innerWidth;
     if (width < 768) {
       layout.value = defineAsyncComponent(() =>
-        import('@/layout/LayoutSmall.vue'),
+        import('@/layouts/LayoutSmall.vue'),
       );
     } else if (width < 1200) {
       layout.value = defineAsyncComponent(() =>
-        import('@/layout/LayoutMedium.vue'),
+        import('@/layouts/LayoutMedium.vue'),
       );
     } else {
       layout.value = defineAsyncComponent(() =>
-        import('@/layout/LayoutLarge.vue'),
+        import('@/layouts/LayoutLarge.vue'),
       );
     }
   };
