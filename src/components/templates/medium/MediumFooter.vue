@@ -1,4 +1,5 @@
-<script setup></script>
+<script setup>
+</script>
 <template>
   <div class="links">
     <RouterLink to="/">Help</RouterLink>
@@ -31,6 +32,5 @@
   display: flex;
   gap: 4rem;
   align-items: center;
-  font-size: 2.2rem;
 }
 </style>
