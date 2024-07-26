@@ -1,25 +1,26 @@
 <script setup>
-  import MediumHeader from '@/components/templates/medium/MediumHeader.vue';
+  // import MediumHeader from '@/components/templates/medium/MediumHeader.vue';
   import MediumAside from '@/components/templates/medium/MediumAside.vue';
-  import MediumFooter from '@/components/templates/medium/MediumFooter.vue';
+  // import MediumFooter from '@/components/templates/medium/MediumFooter.vue';
 </script>
 
 <template>
   <div id="layout-medium">
-    <header>
+    <!-- <header>
       <medium-header />
-    </header>
+    </header> -->
     <aside>
       <medium-aside />
     </aside>
     <main>
       <router-view />
     </main>
-    <footer>
+    <!-- <footer>
       <medium-footer />
-    </footer>
+    </footer> -->
   </div>
 </template>
+
 <style scoped>
 #layout-medium {
   display: grid;

@@ -4,4 +4,5 @@
 </script>
 <template>
   <component :is="layout" />
+  
 </template>
