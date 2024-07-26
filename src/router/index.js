@@ -22,22 +22,22 @@ const router = createRouter({
           component: HomeView,
         },
         {
-          path: "/categorias",
-          name: "categorias",
+          path: "/categoria",
+          name: "categoria",
           component: CategoriaView,
         }, {
-          path: "/acessorios",
-          name: "acessorios",
+          path: "/acessorio",
+          name: "acessorio",
           component: AcessorioView,
         },
         {
-          path: "/marcas",
-          name: "marcas",
+          path: "/marca",
+          name: "marca",
           component: MarcaView,
         },
         {
-          path: "/cores",
-          name: "cores",
+          path: "/core",
+          name: "core",
           component: CorView,
         },
         {

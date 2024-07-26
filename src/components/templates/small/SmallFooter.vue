@@ -1,57 +1,94 @@
 <script setup>
-import { useAuthStore } from '@/stores/auth';
+import { ref } from 'vue';
+import { onBeforeRouteUpdate } from 'vue-router';
 
-const authStore = useAuthStore();
+const showMenu = ref(false);
+
+onBeforeRouteUpdate(() => {
+  showMenu.value = false;
+});
 </script>
 
 <template>
-  <div class="pages">
-    <RouterLink to="/acessorios"> Acessórios </RouterLink>
-    <RouterLink to="/categorias"> Categorias </RouterLink>
-    <RouterLink to="/cores"> Cores </RouterLink>
-    <RouterLink to="/marcas"> Marcas </RouterLink>
-    <div class="divider" />
-      <div v-if="authStore.loggedIn">
-      <router-link  to="/logout">Logout</router-link> 
-        {{ authStore.user.email }}
-      </div>
-      <router-link v-else to="/login">Login</router-link>
-    </div>
-</template>
+  <div id="footerMenu" :style="{ display: showMenu ? 'block' : 'none' }">
+    <RouterLink to="/">
+      <i class="mdi mdi-home-outline" />
+      Home
+    </RouterLink>
+    <RouterLink to="/login">
+      <i class="mdi mdi-account" />
+      Login
+    </RouterLink>
+  </div>
+  <div class="icons">
+    <RouterLink to="/">
+      <i class="mdi mdi-home-outline" />
+      Home
+    </RouterLink>
+    <RouterLink to="/categoria">
+      <i class="mdi mdi-cart-outline" />
+      Categoria
+    </RouterLink>
+    <router-link to="/acessorio">
+        <i class="icon mdi mdi-account-circle-outline" /> acessório
+      </router-link>
+      <router-link to="/marca">
+        <i class="icon mdi mdi-account-circle-outline" /> Marca
+      </router-link>
+      <router-link to="/cor">
+        <i class="icon mdi mdi-account-circle-outline" /> Cor
+      </router-link>
 
+    <div class="hamburger" @click="showMenu = !showMenu">
+      <i class="mdi mdi-menu" />
+      Menu
+    </div>
+  </div>
+</template>
 <style scoped>
 #footerMenu {
-  position: fixed;
-  bottom: 15%;
-  right: 0;
+    position: fixed;
+    bottom: 15%;
+    right: 0;
 
-  width: 20%;
-  border-top: #eeeeee 1px solid;
-  background-color: white;
+    width: 20%;
+    border-top: #EEEEEE 1px solid;
+    background-color: white;
 
-  display: block;
-  padding: 1rem;
+    display: block;
+    padding: 1rem;
 }
 
-.pages {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
+#footerMenu a {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #725c3a;
+    font-size: 1rem;
+    transition: color 0.3s;
 }
 
-.pages a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: #282828;
-  font-size: 1rem;
-  transition: color 0.3s;
+
+.icons {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.divider {
-  margin-top: 1rem;
-  border-top: 1px solid #eeeeee;
+.icons a,
+.icons .hamburger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #725c3a;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.hamburger:hover {
+    cursor: pointer;
 }
 </style>
