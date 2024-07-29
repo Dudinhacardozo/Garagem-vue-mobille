@@ -28,5 +28,4 @@ coverage
 *.sw?
 
 *.tsbuildinfo
-node_modules/
-_metadata.json
+node_modules/**/*/
